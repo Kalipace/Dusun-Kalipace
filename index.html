@@ -446,7 +446,70 @@
         </ul>
       </div>
     </section>
+    <!--animasi-Team -->
+    <style>
+      /* Animasi untuk gambar tim saat di-scroll */
+      .team-member {
+        transition: transform 0.3s ease-in-out;
+      }
 
+      .team-member:hover {
+        transform: scale(1.1);
+      }
+
+      /* Efek zoom untuk gambar anggota tim */
+      .team-image {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .team-member:hover .team-image {
+        transform: scale(1.2);
+      }
+
+      /* Animasi untuk ikon sosial media */
+      .social-icons a {
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        transform: scale(1.2);
+        color: #ff6f61; /* Mengubah warna saat hover */
+      }
+
+      /* Efek Fade-in untuk deskripsi tim */
+      .fadeIn {
+        animation: fadeInEffect 2s ease-in-out;
+      }
+
+      @keyframes fadeInEffect {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Responsif untuk tampilan mobile */
+      @media (max-width: 768px) {
+        .team-member {
+          text-align: center;
+        }
+
+        .social-icons {
+          margin-top: 10px;
+        }
+
+        .team-image {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    </style>
+    <!--End Animmasi-->
     <!-- Video Section 
     <section id="video" class="page-section">
       <div class="container">
@@ -482,78 +545,65 @@
           <div class="col-lg-4">
             <div class="team-member">
               <img
-                class="mx-auto rounded-circle"
+                class="mx-auto rounded-circle team-image"
                 src="assets/img/team/beni.jpeg"
-                alt="..."
+                alt="Beni Nuryahya"
               />
               <h4>Beni Nuryahya</h4>
-              <p class="text-muted">Programmer</p>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Parveen Anand Twitter Profile"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="https://www.instagram.com/beni_nry"
-                aria-label="Parveen Anand Twitter Profile"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Parveen Anand Facebook Profile"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Parveen Anand LinkedIn Profile"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+              <p class="text-muted">Progammer</p>
+              <div class="social-icons">
+                <a class="btn btn-dark btn-social mx-2" href="#!">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="https://www.instagram.com/beni_nry"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="#!">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="#!">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4">
             <div class="team-member">
               <img
-                class="mx-auto rounded-circle"
+                class="mx-auto rounded-circle team-image"
                 src="assets/img/team/komara.jpeg"
-                alt="..."
+                alt="Komara"
               />
               <h4>Komara</h4>
               <p class="text-muted">Developer</p>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Larry Parker Twitter Profile"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="https://www.instagram.com/komaraaaaaaa"
-                aria-label="Parveen Anand Twitter Profile"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Larry Parker Facebook Profile"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Larry Parker LinkedIn Profile"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+              <div class="social-icons">
+                <a class="btn btn-dark btn-social mx-2" href="#!">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="https://www.instagram.com/komaraaaaaaa"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="#!">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="#!">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">
+            <p class="large text-muted fadeIn">
               Dengan semangat kebersamaan, RT 36 dan RT 37 terus berkomitmen
               untuk menciptakan lingkungan yang aman, nyaman, dan produktif.
               Kami percaya bahwa sinergi antara warga dan dukungan dari
@@ -564,6 +614,7 @@
         </div>
       </div>
     </section>
+
     <!-- Clients-->
     <div class="py-5">
       <div class="container">
@@ -614,10 +665,54 @@
           <h2 class="section-heading text-uppercase">
             Kontak Pengaduan Masyarakat
           </h2>
-         <h3 style="color: yellow">
-            Silahkan Kirimkan Aduan Dan Aspirasi Anda Di Bawah Ini Dengan
-            Mencantumkan Nama Dan No Telepon!
-          </h3>
+          <div style="text-align: center">
+            <h3
+              style="
+                color: #f1c40f;
+                font-size: 2.5em;
+                font-weight: bold;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6),
+                  0 1px 3px rgba(0, 0, 0, 0.3);
+                animation: bounceIn 3s ease-out infinite,
+                  glowText 1.5s ease-in-out infinite alternate;
+              "
+            >
+              Silahkan Kirimkan Aduan Dan Aspirasi Anda Di Bawah Ini Dengan
+              Mencantumkan Nama Dan No Telepon!
+            </h3>
+          </div>
+          <!--animasi Pengaduan-->
+          <style>
+            @keyframes bounceIn {
+              0% {
+                opacity: 0;
+                transform: translateY(-50px);
+              }
+              60% {
+                opacity: 1;
+                transform: translateY(10px);
+              }
+              80% {
+                transform: translateY(-5px);
+              }
+              100% {
+                transform: translateY(0);
+              }
+            }
+
+            @keyframes glowText {
+              0% {
+                text-shadow: 0 0 5px #f1c40f, 0 0 10px #f1c40f, 0 0 15px #f1c40f;
+              }
+              100% {
+                text-shadow: 0 0 20px #f39c12, 0 0 30px #f39c12,
+                  0 0 40px #f39c12;
+              }
+            }
+          </style>
+          <!--End Animasi-->
         </div>
         <!-- Contact Form -->
         <form id="contactForm">

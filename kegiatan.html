@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadwal Kegiatan</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 85%;
+        max-width: 1100px;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        font-size: 2rem; /* Ukuran font judul lebih kecil */
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        animation: slideIn 1s ease-in-out;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+        font-size: 1rem;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .table-container {
+        overflow-x: auto;
+      }
+
+      .back-button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 24px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .back-button:hover {
+        background-color: #45a049;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      /* Media Query untuk responsivitas */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.5rem; /* Ukuran font judul lebih kecil pada layar kecil */
+        }
+
+        table {
+          font-size: 0.9rem; /* Mengurangi ukuran font tabel untuk layar kecil */
+        }
+
+        th,
+        td {
+          padding: 10px;
+        }
+
+        .back-button {
+          padding: 10px 20px;
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.2rem; /* Ukuran font judul lebih kecil pada perangkat sangat kecil */
+        }
+
+        .container {
+          padding: 20px;
+        }
+
+        table {
+          font-size: 0.8rem;
+        }
+
+        th,
+        td {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Jadwal Kegiatan Mendatang</h1>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Tanggal</th>
+              <th>Waktu</th>
+              <th>Kegiatan</th>
+              <th>Tempat</th>
+              <th>Penanggung Jawab</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tombol Back -->
+      <a href="index.html" class="back-button">Kembali</a>
+    </div>
+  </body>
+</html>
